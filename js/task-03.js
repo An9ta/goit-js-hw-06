@@ -13,17 +13,13 @@ const images = [
   },
 ];
 
-function crateGallery(listImages) {
-  const gallery = listImages
-    .map(
-      (image) =>
-        `<li class = "gallery-item") <img src = ${image.url} alt = ${image.alt}> </li>`
-    )
-    .join("");
-  return gallery;
-}
+const gallery = document.querySelector(".gallery");
 
-// Napisz skrypt do tworzenia galerii obrazów według tablicy danych. W HTML znajduje się lista ul.gallery.
-// Użyj tablicy obiektów images w celu utworzenia elementów <img> umieszczonych w <li>. Aby utworzyć znacznik użyj template strings i metody insertAdjacentHTML().
-// Wszystkie elementy galerii powinny być dodawane do DOM podczas jednej operacji.
-// Ulepsz galerię używając flexboxów lub gridów poprzez klasy CSS.
+const createGallery = (images) => {
+  const galleryElements = images
+    .map((image) => `<li><img src="${image.url}" alt="${image.alt}"></li>`)
+    .join("");
+  gallery.insertAdjacentHTML("beforeend", galleryElements);
+};
+
+createGallery(images);
