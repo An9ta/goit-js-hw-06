@@ -11,14 +11,5 @@ loginForm.addEventListener("submit", (ev) => {
   }
 });
 
-
-
-
-
-
-
-
-
-// if (emailInput.value === "" || passwordInput.value === "") {
-//  alert("Please fill in all fields before submitting the form.");
-// } else {
+// if (login === "" || password === "") {
+//  return console.log("Please fill in all fields before submitting the form.");
