@@ -6,4 +6,4 @@ fontSizeControl.addEventListener("input", () => {
 });
 
 const sliderControl = document.querySelector("#font-size-control");
-sliderControl.addEventListener("input", setSizeChar);
+sliderControl.addEventListener("input", fontSizeControl);
